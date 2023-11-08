@@ -5,6 +5,19 @@ Devops / AWS / Hosting / SSL
 
 Including information about signing up, best practices, types of service and general data
 
+## Table of contents
+
+- [Dev Starter](#dev-starter)
+  - [Table of contents](#table-of-contents)
+  - [Azure Devops](#azure-devops)
+    - [Account Info](#account-info)
+    - [API](#api)
+    - [GUID](#guid)
+  - [Amazon Web Services](#amazon-web-services)
+    - [IAM](#iam)
+    - [EC2](#ec2)
+    - [AMI](#ami)
+
 ## Azure Devops
 
 Azure is the Microsoft service portal for ioT and Saas and other services.
@@ -20,13 +33,22 @@ Your account structure will look like this: - Root (login user) - Organization (
 The general API will look like this and have components
 GET {instanceURL}/
 
-How to access the REST API 
+How to access the REST API
 
 1. Create a personal access token
 2. Go to project settings and create PAT
-3. Use the pat code as a header to request access
+3. Convert the token to base64 string, add a ':' to the start of the string. [https://www.base64decode.org/](https://www.base64decode.org/d)
+4. Use the pat code as a header to request access
 
+### GUID
 
+Devops hjas a series of string codes for get requests to find resources
+
+- 0d55247a-1c47-4462-9b1f-5e2125590ee6 account
+- 5d6898bb-45ec-463f-95f9-54d49c71752e build
+- 79bea8f8-c898-4965-8c51-8bbc3966faa8 collection
+
+[See Full list](https://learn.microsoft.com/en-us/azure/devops/extend/develop/work-with-urls?view=azure-devops&tabs=http)
 
 ## Amazon Web Services
 
